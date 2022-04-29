@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Swiper</title>
+  <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
+  <style>
+    .swiper {
+      width: 600px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+slid111
+    </div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>    <div class="swiper-slide">
+slid111
+    </div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+  </div>
+  <!-- 如果需要分页器 -->
+  <div class="swiper-pagination"></div>
+
+</div>
+
+<script src="node_modules/swiper/swiper-bundle.js"></script>
+<script>
+  // import Swiper from "swiper";
+
+  var mySwiper = new Swiper ('.swiper', {
+    direction: 'vertical', // 垂直切换选项，level表示水平切换
+    loop: true, // 循环模式选项
+
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    grid: {
+      fill: 'column',
+      rows: 2,
+    },    slidesPerView: 4, //一行显示4个
+    slidesPerColumn: 4, //显示2行
+    slidesPerColumnFill: 'row', //行布局
+
+  })
+</script>
+</body>
+</html>
